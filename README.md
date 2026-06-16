@@ -1,6 +1,4 @@
 <img width="1354" height="652" alt="Screenshot 2026-06-16 202536" src="https://github.com/user-attachments/assets/937aa219-43ab-41f6-8ddb-9fe2b8f09601" />
-Here is your upgraded, high-energy, emoji-packed version for your README.md file. It's fully styled and ready to be copied directly into your project!
-
 🏋️‍♂️ Apex Fitness 💪
 Apex Fitness is a dedicated web application 🌐 designed to help users manage their fitness routines 🏃‍♂️, track progress 📈, and stay motivated 🔥. Built for peak performance ⚡ and ultimate ease of use 🎯, this project provides a streamlined interface 📱 for monitoring your health and wellness goals 🥗.
 
