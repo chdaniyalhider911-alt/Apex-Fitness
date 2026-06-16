@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 6.7%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10.2%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 6.7%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 24 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 13.3%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 13.3%;
+    --muted-foreground: 0 0% 53.3%;
+    --accent: 0 0% 13.3%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 24 100% 50%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 6.7%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 24 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 13.3%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 24 100% 50%;
+  }
+
+  body {
+    @apply bg-[#111111] text-white;
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: none;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #ff0080, #ff4800);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-cta {
+    background: linear-gradient(135deg, #ff0080, #ff4800);
+  }
+
+  .border-glow {
+    background: linear-gradient(45deg, #ff6600, #ff0080);
+  }
+}
+
+/* Morphing Ring Styles */
+.morph-border {
+  background-size: 100% 100%;
+  background-position: 0px 0px;
+  animation: spin 3s linear infinite;
+}
+
+.morph-blob {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: blob-bounce 4s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blob-bounce {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    transform: translate(-10%, -10%) scale(0.9);
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 50% 30% 50% 60%;
+    transform: translate(10%, 10%) scale(1.1);
+  }
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-color: #111111;
+  background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: var(--x) var(--y);
+}
+
+/* Scramble text cursor */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
